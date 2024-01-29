@@ -45,7 +45,7 @@ while not gameover:
     #LEFT MOVEMENT
     if keys[0]==True:
         vx=-3
-        direction = 0
+        RowNum = 2
     #RIGHT MOVEMENT
     elif keys[1] == True:
         vx = 3
