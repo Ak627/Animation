@@ -6,8 +6,8 @@ screen.fill((0,0,0))
 clock = pygame.time.Clock() #set up clock
 gameover = False #variable to run our game loop
 
-Link = pygame.image.load('link.png') #load your spritesheet
-Link.set_colorkey((255, 0, 255)) #this makes bright pink (255, 0, 255) transparent (sort of)
+Chicken = pygame.image.load('chicken.png') #load your spritesheet
+Chicken.set_colorkey((255, 0, 255)) #this makes bright pink (255, 0, 255) transparent (sort of)
 
 #player variables
 xpos = 500 #xpos of player
@@ -62,13 +62,13 @@ while not gameover:
     # Update Animation Information
     # Only animate when in motion
     if vx < 0: #left animation
-        # Ticker is a spedometer. We don't want Link animating as fast as the
+        # Ticker is a spedometer. We don't want Chicken animating as fast as the
         # processor can process! Update Animation Frame each time ticker goes over
         ticker+=1
         if ticker%10==0: #only change frames every 10 ticks
           frameNum+=1
            #If we are over the number of frames in our sprite, reset to 0.
-           #In this particular case, there are 10 frames (0 through 9)
+           #In this particular case, there are 8 frames (0 through 7)
         if frameNum>7: 
            frameNum = 0
   
@@ -76,7 +76,7 @@ while not gameover:
     # Once we've figured out what frame we're on and where we are, time to render.
             
     screen.fill((0,0,0)) #wipe screen so it doesn't smear
-    screen.blit(Link, (xpos, ypos), (frameWidth*frameNum, RowNum*frameHeight, frameWidth, frameHeight)) 
+    screen.blit(Chicken, (xpos, ypos), (frameWidth*frameNum, RowNum*frameHeight, frameWidth, frameHeight)) 
     pygame.display.flip()#this actually puts the pixel on the screen
     
 #end game loop------------------------------------------------------------------------------
