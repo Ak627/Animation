@@ -17,9 +17,9 @@ keys = [False, False, False, False] #this list holds whether each key has been p
 
 
 #animation variables variables
-frameWidth = 64
-frameHeight = 96
-RowNum = 0 #for left animation, this will need to change for other animations
+frameWidth = 69
+frameHeight = 69
+RowNum = 2 #for left animation, this will need to change for other animations
 frameNum = 0
 ticker = 0
 
